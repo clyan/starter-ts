@@ -2,9 +2,48 @@
   "name": "base-project",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
   "scripts": {
-    "prepare": "husky install"
+    "prepare": "wireit",
+    "build": "wireit",
+    "lint": "wireit",
+    "clean": "wireit",
+    "clean:deep": "wireit"
+  },
+  "wireit": {
+    "prepare": {
+      "command": "husky install"
+    },
+    "build": {
+      "command": "tsup src/**/*.ts --format cjs,esm --dts",
+      "dependencies": [
+        "lint"
+      ]
+    },
+    "lint": {
+      "command": "eslint --fix --color --max-warnings 0 --cache --cache-location .eslintcache .",
+      "files": [
+        "src/**/*.ts",
+        ".eslintignore",
+        ".eslintrc.js"
+      ],
+      "dependencies": [
+        "lint:tsc"
+      ]
+    },
+    "lint:tsc": {
+      "command": "tsc"
+    },
+    "clean": {
+      "command": "rimraf dist"
+    },
+    "clean:deep": {
+      "command": "rimraf node_modules",
+      "dependencies": [
+        "clean"
+      ]
+    }
   },
   "keywords": [],
   "author": "",
@@ -12,6 +51,20 @@
   "devDependencies": {
     "@commitlint/cli": "^17.4.4",
     "@commitlint/config-angular": "^17.4.4",
-    "husky": "^8.0.3"
-  }
+    "@types/json-schema": "^7.0.11",
+    "@types/semver": "^7.3.13",
+    "@typescript-eslint/eslint-plugin": "^5.0.0",
+    "@typescript-eslint/parser": "^5.48.2",
+    "eslint": "^8.0.1",
+    "eslint-config-standard-with-typescript": "^34.0.0",
+    "eslint-plugin-import": "^2.25.2",
+    "eslint-plugin-n": "^15.0.0",
+    "eslint-plugin-promise": "^6.0.0",
+    "husky": "^8.0.3",
+    "rimraf": "^4.4.0",
+    "tsup": "^6.6.3",
+    "typescript": "^4.9.5",
+    "wireit": "^0.9.5"
+  },
+  "packageManager": "pnpm@7.29.1"
 }
