@@ -8,12 +8,16 @@
     "prepare": "wireit",
     "build": "wireit",
     "lint": "wireit",
+    "test": "wireit",
     "clean": "wireit",
     "clean:deep": "wireit"
   },
   "wireit": {
     "prepare": {
       "command": "husky install"
+    },
+    "test": {
+      "command": "echo 'running tests...'"
     },
     "build": {
       "command": "tsup src/**/*.ts --format cjs,esm --dts",
