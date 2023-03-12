@@ -1,5 +1,5 @@
 {
-  "name": "base-project",
+  "name": "typescript-project-setup",
   "version": "1.0.0",
   "description": "",
   "main": "./dist/index.js",
