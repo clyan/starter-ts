@@ -1,0 +1,17 @@
+{
+  "name": "base-project",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "prepare": "husky install"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MT",
+  "devDependencies": {
+    "@commitlint/cli": "^17.4.4",
+    "@commitlint/config-angular": "^17.4.4",
+    "husky": "^8.0.3"
+  }
+}
