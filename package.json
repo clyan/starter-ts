@@ -1,7 +1,7 @@
 {
   "name": "typescript-project-setup",
   "version": "1.0.0",
-  "description": "",
+  "description": "typescript project setup",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
   "scripts": {
@@ -50,7 +50,7 @@
     }
   },
   "keywords": [],
-  "author": "",
+  "author": "ywymoshi",
   "license": "MT",
   "devDependencies": {
     "@commitlint/cli": "^17.4.4",
