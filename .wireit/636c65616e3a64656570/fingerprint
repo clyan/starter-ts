@@ -1,0 +1,1 @@
+{"fullyTracked":false,"platform":"darwin","arch":"arm64","nodeVersion":"v16.13.1","command":"rimraf node_modules","extraArgs":[],"clean":true,"files":{},"output":[],"dependencies":{"[\"/Users/yanwenyao/Desktop/project/self/base-project\",\"clean\"]":"e45ada537772809a20f9ac11bf6401bf2d5e610825ec24d5de456e33f491ae6a"},"env":{}}

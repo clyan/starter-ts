@@ -1,0 +1,1 @@
+{"fullyTracked":false,"platform":"darwin","arch":"arm64","nodeVersion":"v16.13.1","command":"tsup src/**/*.ts --format cjs,esm --dts","extraArgs":[],"clean":true,"files":{},"output":[],"dependencies":{"[\"/Users/yanwenyao/Desktop/project/self/base-project\",\"lint\"]":"4247b59b8ef3161dccc0c58ae108d6ceb0191a5abebc321e5d668718f9ecbbe5"},"env":{}}
